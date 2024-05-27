@@ -137,6 +137,7 @@ library
   build-depends:
       -- inline-circuit-notation
       circuit-notation
+    , constraints
     , data-default
     , deepseq
     , extra
@@ -169,6 +170,18 @@ library
 
     Protocols.Avalon.MemMap
 
+    Protocols.PacketStream
+    Protocols.PacketStream.AsyncFIFO
+    Protocols.PacketStream.Depacketizer
+    Protocols.PacketStream.DepacketizeToDf
+    Protocols.PacketStream.DownConverter
+    Protocols.PacketStream.PacketArbiter
+    Protocols.PacketStream.PacketDispatcher
+    Protocols.PacketStream.PacketizeFromDf
+    Protocols.PacketStream.Packetizer
+    Protocols.PacketStream.UpConverter
+    Protocols.PacketStream.Util
+
     Protocols.Wishbone
     Protocols.Wishbone.Standard
     Protocols.Wishbone.Standard.Hedgehog
@@ -195,6 +208,7 @@ library
   autogen-modules:    Paths_clash_protocols
 
   other-modules:
+    Clash.Sized.Vector.Extra
     Data.Bifunctor.Extra
     Paths_clash_protocols
 
@@ -214,6 +228,18 @@ test-suite unittests
     Tests.Protocols.Axi4
     Tests.Protocols.Plugin
     Tests.Protocols.Wishbone
+
+    Tests.Protocols.PacketStream
+    Tests.Protocols.PacketStream.AsyncFIFO
+    Tests.Protocols.PacketStream.Depacketizer
+    Tests.Protocols.PacketStream.DepacketizeToDf
+    Tests.Protocols.PacketStream.DownConverter
+    Tests.Protocols.PacketStream.PacketArbiter
+    Tests.Protocols.PacketStream.PacketDispatcher
+    Tests.Protocols.PacketStream.PacketizeFromDf
+    Tests.Protocols.PacketStream.Packetizer
+    Tests.Protocols.PacketStream.UpConverter
+    Tests.Protocols.PacketStream.Util
 
     Util
   build-depends:
